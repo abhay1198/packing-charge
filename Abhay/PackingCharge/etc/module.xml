@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Abhay
+ * 
+ * PHP version 7
+ * 
+ * @category  Abhay
+ * @package   Abhay_PackingCharge
+ * @author    Abhay Agrawal <abhay@gmail.com>
+ * @copyright 2022 Copyright © Abhay
+ * @license   See COPYING.txt for license details.
+ * @link      https://github.com/abhay1198/out-of-stock-subscription
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Abhay_PackingCharge">
+        <sequence>
+            <module name="Magento_Sales"/>
+            <module name="Magento_Quote"/>
+            <module name="Magento_Checkout"/>
+        </sequence>
+    </module>
+</config>

@@ -1,0 +1,27 @@
+{
+    "sales_order": {
+        "column": {
+            "packing_charge": true
+        }
+    },
+    "quote": {
+        "column": {
+            "packing_charge": true
+        }
+    },
+    "quote_address": {
+        "column": {
+            "packing_charge": true
+        }
+    },
+    "sales_invoice": {
+        "column": {
+            "packing_charge": true
+        }
+    },
+    "sales_creditmemo": {
+        "column": {
+            "packing_charge": true
+        }
+    }
+}

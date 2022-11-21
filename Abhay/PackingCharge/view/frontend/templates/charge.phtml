@@ -1,0 +1,9 @@
+<?php
+$product_id = 1;
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+$_product = $objectManager->get('Magento\Catalog\Model\Product')->load($product_id);
+//echo $_product->getData('packing_charge');
+
+if (null !== $_product->getCustomAttribute('packing_charge')) {
+   echo "Packing Charge".$_product->getCustomAttribute('packing_charge')->getValue();
+}

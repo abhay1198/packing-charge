@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="sales_order">
+       <column xsi:type="decimal" name="packing_charge" unsigned="false" nullable="true" scale="4" precision="12" default="0.0000" comment="Packing Charge" />
+   </table>
+   <table name="quote">
+       <column xsi:type="decimal" name="packing_charge" unsigned="false" nullable="true" scale="4" precision="12" default="0.0000" comment="Packing Charge" />
+   </table>
+   <table name="quote_address">
+       <column xsi:type="decimal" name="packing_charge" unsigned="false" nullable="true" scale="4" precision="12" default="0.0000" comment="Packing Charge" />
+   </table>
+   <table name="sales_invoice">
+       <column xsi:type="decimal" name="packing_charge" unsigned="false" nullable="true" scale="4" precision="12" default="0.0000" comment="Packing Charge" />
+   </table>
+   <table name="sales_creditmemo">
+       <column xsi:type="decimal" name="packing_charge" unsigned="false" nullable="true" scale="4" precision="12" default="0.0000" comment="Packing Charge" />
+   </table>
+</schema>
