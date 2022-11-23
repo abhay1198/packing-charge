@@ -1,0 +1,7 @@
+.chagre{
+    position: absolute;
+    background: yellow;
+    text-align: -webkit-center;
+    padding: 5px;
+    border: 2px solid green;
+}

@@ -1,9 +1,11 @@
 <?php
-$product_id = 1;
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
-$_product = $objectManager->get('Magento\Catalog\Model\Product')->load($product_id);
-//echo $_product->getData('packing_charge');
+$productId =  $block->getCurrentProduct()->getId();
+$product = $block->getProductCollection($productId);
+$currency_symbol = $block->getCurrencySymbol();
 
-if (null !== $_product->getCustomAttribute('packing_charge')) {
-   echo "Packing Charge".$_product->getCustomAttribute('packing_charge')->getValue();
-}
+if ($product->getCustomAttribute('packing_charge') !== null) { ?>
+<div class = "chagre">
+   <h3 class="text-msg"><?= $escaper->escapeHtml(__('Product have the extra packing charge')) ?></h3>
+   <?php echo "Packing Charge  ".$currency_symbol.$product->getCustomAttribute('packing_charge')->getValue(); ?>
+</div>
+<?php } ?>

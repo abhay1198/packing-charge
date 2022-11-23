@@ -16,8 +16,14 @@ class PackingCharge extends \Magento\Quote\Model\Quote\Address\Total\AbstractTot
         \Magento\Quote\Model\Quote\Address\Total $total
     ) {
         parent::collect($quote, $shippingAssignment, $total);
+
+        $writer = new \Zend_Log_Writer_Stream(BP . '/var/log/model.log');
+        $logger = new \Zend_Log();
+        $logger->addWriter($writer);
         
         $packingCharge = $quote->getPackingCharge();
+
+        $logger->info($packingCharge);
         
         $total->setPackingCharge($packingCharge);
         $total->setPackingCharge($packingCharge);

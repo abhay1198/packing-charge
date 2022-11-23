@@ -1,8 +1,11 @@
 <?xml version="1.0" ?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Abhay_PackingCharge::css/style.css"/>
+    </head>
     <body>
         <referenceContainer name="product.info.main">
-            <block class="Magento\Catalog\Block\Product\View" name="packing_charge_info" template="Abhay_PackingCharge::charge.phtml" ifconfig="packing_charge/general/enable" cacheable="false"/>
+            <block class="Abhay\PackingCharge\Block\Product\View\Charge" name="packing_charge_info" template="Abhay_PackingCharge::charge.phtml" ifconfig="packing_charge/general/enable" cacheable="false"/>
         </referenceContainer>
     </body>
 </page>
